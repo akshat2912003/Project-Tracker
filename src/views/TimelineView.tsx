@@ -45,9 +45,9 @@ const filteredTasks = filterTasks(tasks, filters);
 
           <div
             className="relative"
-            style={{ height: tasks.length * rowHeight }}
+            style={{ height: filteredTasks.length * rowHeight }}
           >
-            {tasks.slice(0, 40).map((task, index) => {
+            {filteredTasks.slice(0, 40).map((task, index) => {
               const hasStart = !!task.startDate;
 
               const start = hasStart
