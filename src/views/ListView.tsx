@@ -27,7 +27,7 @@ const filteredTasks = filterTasks(tasks, filters);
     }
   };
 
-  const sortedTasks = [...tasks].sort((a, b) => {
+  const sortedTasks = [...filteredTasks].sort((a, b) => {
     if (!sortField) return 0;
 
     let valueA: any = a[sortField as keyof typeof a];

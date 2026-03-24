@@ -23,7 +23,7 @@ function KanbanView() {
   return (
     <div className="grid grid-cols-4 gap-4 mt-6">
       {columns.map((col) => {
-        const columnTasks = tasks.filter((task) => task.status === col.key);
+        const columnTasks = filteredTasks.filter((task) => task.status === col.key);
 
         return (
           <div

@@ -12,7 +12,7 @@ type Filters = {
 
 function FilterBar() {
   const { filters, setFilters } = useTaskStore();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
   const toggleFilter = (type: keyof Filters, value: string) => {
     const current = filters[type];
